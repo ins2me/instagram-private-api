@@ -10,7 +10,7 @@ module IgApi
     def initialize(params = {})
       @account = nil
       @feed = nil
-      @api = IgApi::Http.singleton
+      @api = IgApi::Http.new
 
       if params.key? :session
         @username = params[:session].scan(/ds_user=(.*?);/)[0][0]

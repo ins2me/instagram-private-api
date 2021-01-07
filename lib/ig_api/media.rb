@@ -27,7 +27,7 @@ module IgApi
 
     def initialize(user)
       @user = user
-      @api = Http.singleton
+      @api = Http.new
     end
 
     def create_like(media_id)

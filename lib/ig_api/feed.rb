@@ -3,10 +3,10 @@ require 'ostruct'
 module IgApi
   class Feed
     def initialize
-      @api = Http.singleton
+      @api = Http.new
     end
 
-    def using user
+    def using(user)
       @user = {
         id: user.data[:pk],
         session: user.session,

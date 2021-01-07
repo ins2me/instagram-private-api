@@ -4,7 +4,7 @@ require 'net/http/post/multipart'
 module IgApi
   class Thread
     def initialize
-      @api = Http.singleton
+      @api = Http.new
     end
 
     def using(user)
